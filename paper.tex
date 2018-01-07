@@ -40,34 +40,34 @@
 
 \begin{abstract}
 
-The bitcoin protocol can encompass the global financial transaction volume in
-all electronic payment systems today, without a single custodial third party
-holding funds or requiring participants to have anything more than a computer
-using a broadband connection. A decentralized system is proposed whereby
-transactions are sent over a network of micropayment channels (a.k.a. payment
-channels or transaction channels) whose transfer of value occurs
-off-blockchain. If Bitcoin transactions can be signed with a new sighash type
-that addresses malleability, these transfers may occur between untrusted
-parties along the transfer route by contracts which, in the event of
-uncooperative or hostile participants, are enforceable via broadcast over the
-bitcoin blockchain in the event of uncooperative or hostile participants,
-through a series of decrementing timelocks.
+El protocolo de bitcoin puede abarcar el volumen global de transacciones financieras en
+todos los sistemas de pago electrónico hoy en día, sin un solo tercero que tenga que
+tener los fondos en custodia o requerir que los participantes tengan algo más que una computadora
+con una conexión de banda ancha. Se propone un sistema descentralizado según el cual
+las transacciones se envían a través de una red de canales de micropago (tambien conocido como
+canales de pago o canales de transacción) cuya transferencia de valor ocurre
+fuera de la cadena de bloques. Si las transacciones de Bitcoin se pueden firmar con un nuevo tipo sighash
+que solucione la maleabilidad, estas transferencias pueden ocurrir entre personas mediante contratos 
+a traves de una ruta de terceros que no son de confianza, en caso de
+participantes no cooperativos u hostiles, los contratos se pueden hacer cumplir a través de difusión a la
+cadena de bloques de bitcoin, a través de una serie de tiempos (timelocks) decrecientes.
 
 \end{abstract}
 
-\section{The Bitcoin Blockchain Scalability Problem}
+\section{El problema de escalabilidad de la cadena de bloques de Bitcoin}
 
-The Bitcoin\cite{nakamoto} blockchain holds great promise for distributed
-ledgers, but the blockchain as a payment platform, by itself, cannot cover the
-world's commerce anytime in the near future. The blockchain is a gossip
-protocol whereby all state modifications to the ledger are broadcast to all
-participants. It is through this ``gossip protocol'' that consensus of the
-state, everyone's balances, is agreed upon. If each node in the bitcoin network
-must know about every single transaction that occurs globally, that may create
-a significant drag on the ability of the network to encompass all global
-financial transactions. It would instead be desirable to encompass all
-transactions in a way that doesn't sacrifice the decentralization and security
-that the network provides.
+La cadena de Bloques de Bitcoin\cite{nakamoto} es una gran promesa de libro contable
+distribuido, pero la blockchain como una plataforma de pago, por sí sola, no puede cubrir el
+el comercio mundial en cualquier momento en el futuro cercano. La blockchain es un protocolo "chismoso"
+mediante el cual todas las modificaciones en el libro contable se transmiten a todos
+los participantes. Es a través de este "protocolo chismoso" que el consenso del 
+estado, los saldos de todos, se acuerdan. Si cada nodo en la red bitcoin
+debe saber sobre cada transacción que ocurre globalmente, crearia
+un lastre significativo en la capacidad de la red para abarcar todas las transacciones financieras
+del mundo. En cambio, sería deseable abarcar todas las
+transacciones de una manera que no sacrifique la descentralización y la seguridad
+que la red proporciona.
+
 
 The payment network Visa achieved 47,000 peak transactions per second (tps) on
 its network during the 2013 holidays\cite{visa}, and currently averages hundreds
