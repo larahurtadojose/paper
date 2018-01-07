@@ -68,48 +68,57 @@ del mundo. En cambio, sería deseable abarcar todas las
 transacciones de una manera que no sacrifique la descentralización y la seguridad
 que la red proporciona.
 
+La red de pago Visa logró 47,000 transacciones por segundo (tps) en el punto de carga maxima
+durante las vacaciones \cite{visa} de 2013, y actualmente promedia cientos
+de millones por día. Actualmente, Bitcoin admite menos de 7 transacciones por
+segundo con un límite por bloque de 1 megabyte. Si utilizamos un promedio de 300 bytes por
+transacción bitcoin y asumimos tamaños ilimitados de bloques y una capacidad equivalente a
+el volumen máximo de transacciones de Visa de 47,000 / tps sería necesario una capacidad 
+de casi 8 gigabytes por bloque de Bitcoin, cada diez minutos en promedio. 
+Continuamente, eso sería más de 400 terabytes de datos por año.
 
-The payment network Visa achieved 47,000 peak transactions per second (tps) on
-its network during the 2013 holidays\cite{visa}, and currently averages hundreds
-of millions per day. Currently, Bitcoin supports less than 7 transactions per
-second with a 1 megabyte block limit. If we use an average of 300 bytes per
-bitcoin transaction and assumed unlimited block sizes, an equivalent capacity to
-peak Visa transaction volume of 47,000/tps would be nearly 8 gigabytes per
-Bitcoin block, every ten minutes on average. Continuously, that would be over
-400 terabytes of data per year.
+Claramente, no es factible lograr una capacidad parecida a Visa en la red de Bitcoin
+actualmente. Ninguna computadora hogareña en el mundo puede operar con ese tipo de ancho de banda y
+almacenamiento. Si Bitcoin reemplazará todos los pagos electrónicos en el futuro, y no
+solo Visa, resultaría en un colapso absoluto de la red de Bitcoin, o en
+en el mejor caso, la centralización extrema de los nodos y mineros de Bitcoin a los únicos que
+puedan pagarlo. Esta centralización vencería aspectos de la descentralización de la red
+que hacen que Bitcoin sea seguro, ya que la capacidad de las entidades 
+para validar la cadena es lo que permite a Bitcoin garantizar la precisión y la seguridad del libro mayor.
 
-Clearly, achieving Visa-like capacity on the Bitcoin network isn't feasible
-today. No home computer in the world can operate with that kind of bandwidth and
-storage. If Bitcoin is to replace all electronic payments in the future, and not
-just Visa, it would result in outright collapse of the Bitcoin network, or at
-best, extreme centralization of Bitcoin nodes and miners to the only ones who
-could afford it. This centralization would then defeat aspects of network
-decentralization that make Bitcoin secure, as the ability for entities to
-validate the chain is what allows Bitcoin to ensure ledger accuracy and
-security.
+Tener menos validadores debido a bloques más grandes no solo implica menos individuos
+asegurando la precisión del libro mayor, también resulta en menos entidades que podrían
+para validar blockchain como parte del proceso de minería, lo que resulta en
+alentar la centralización de los mineros. Bloques extremadamente grandes, por ejemplo en el
+caso anterior de 8 gigabytes cada 10 minutos en promedio, implicaría que solo
+pocas partes podrían hacer la validación de bloque. Esto crea una gran
+posibilidad de que las entidades terminen confiando en las partes centralizadas. Teniendo
+las partes privilegiadas y de confianza crean una trampa social por la cual la parte central
+no actuar en interés de un individuo (problema principal-agente), por ejemplo
+rentismo al cobrar tarifas más altas para mitigar el incentivo de actuar deshonestamente.
+En casos extremos, esto se manifiesta como personas que envían fondos a custodios centralizados
+de confianza que tienen la custodia total de los fondos de los clientes. Tales arreglos,
+como es común hoy en día, crean un riesgo severo de contraparte. Un prerrequisito para prevenir
+ese tipo de centralización de ocurrir requeriría la capacidad de bitcoin
+para ser validado por una sola computadora de nivel de consumidor en una conexión de banda ancha doméstica. 
+Al asegurar que la validación completa puede ocurrir de manera económica, los nodos de Bitcoin
+y los mineros podrán evitar la centralización extrema y la confianza, que
+asegura tarifas de transacción extremadamente bajas.
 
-Having fewer validators due to larger blocks not only implies fewer individuals
-ensuring ledger accuracy, but also results in fewer entities that would be able
-to validate the blockchain as part of the mining process, which results in
-encouraging miner centralization. Extremely large blocks, for example in the
-above case of 8 gigabytes every 10 minutes on average, would imply that only a
-few parties would be able to do block validation. This creates a great
-possibility that entities will end up trusting centralized parties. Having
-privileged, trusted parties creates a social trap whereby the central party will
-not act in the interest of an individual (principal-agent problem), e.g.
-rentierism by charging higher fees to mitigate the incentive to act dishonestly.
-In extreme cases, this manifests as individuals sending funds to centralized
-trusted custodians who have full custody of customers' funds. Such arrangements,
-as are common today, create severe counterparty risk. A prerequisite to prevent
-that kind of centralization from occurring would require the ability for bitcoin
-to be validated by a single consumer-level computer on a home broadband
-connection. By ensuring that full validation can occur cheaply, Bitcoin nodes
-and miners will be able to prevent extreme centralization and trust, which
-ensures extremely low transaction fees.
+Si bien es posible que la Ley de Moore continúe indefinidamente, y la
+capacidad computacional para que los nodos computen de forma rentable bloques 
+de varios gigabyte pueden existir en el futuro, no es una certeza.
 
-While it is possible that Moore's Law will continue indefinitely, and the
-computational capacity for nodes to cost-effectively compute multi-gigabyte
-blocks may exist in the future, it is not a certainty.
+Para lograr mucho más de 47,000 transacciones por segundo usando Bitcoin
+se requiere realizar transacciones fuera del blockchain de Bitcoin. Podría ser
+incluso mejor si la red bitcoin admite un número casi ilimitado de
+transacciones por segundo con tarifas extremadamente bajas para micropagos. Muchos
+Los micropagos se pueden enviar secuencialmente entre dos partes para permitir cualquier tamaño
+de pagos. Los micropagos permitirían la desagregación, menos confianza y
+mercantilización de servicios, como pagos por internet por megabyte
+Servicio. Sin embargo, para poder lograr estos casos de uso de micropagos,
+requieren reducir drásticamente la cantidad de transacciones que terminan siendo
+transmitido en la cadena de bloques Bitcoin global.
 
 To achieve much higher than 47,000 transactions per second using Bitcoin
 requires conducting transactions off the Bitcoin blockchain itself. It would be
