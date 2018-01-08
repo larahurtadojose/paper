@@ -120,57 +120,44 @@ Servicio. Sin embargo, para poder lograr estos casos de uso de micropagos,
 requieren reducir drásticamente la cantidad de transacciones que terminan siendo
 transmitido en la cadena de bloques Bitcoin global.
 
-To achieve much higher than 47,000 transactions per second using Bitcoin
-requires conducting transactions off the Bitcoin blockchain itself. It would be
-even better if the bitcoin network supported a near-unlimited number of
-transactions per second with extremely low fees for micropayments. Many
-micropayments can be sent sequentially between two parties to enable any size
-of payments. Micropayments would enable unbundling, less trust and
-commodification of services, such as payments for per-megabyte internet
-service. To be able to achieve these micropayment use cases, however, would
-require severely reducing the amount of transactions that end up being
-broadcast on the global Bitcoin blockchain.
+Si bien es posible escalar a un nivel pequeño, no es posible
+manejar una gran cantidad de micropagos en la red o abarcar todas las
+transacciones globales. Para que bitcoin tenga éxito, se requiere confianza en que si
+llegara a ser extremadamente popular, sus ventajas actuales derivadas de
+la descentralización continuará existiendo. Para que las personas de hoy crean
+que Bitcoin funcionará mañana, Bitcoin necesita resolver el problema del efecto de centralización
+debido al tamaño de bloque; los bloques grandes crean implícitamente custodios de confianza
+y tarifas significativamente más altas.
 
-While it is possible to scale at a small level, it is absolutely not possible to
-handle a large amount of micropayments on the network or to encompass all
-global transactions. For bitcoin to succeed, it requires confidence that if it
-were to become extremely popular, its current advantages stemming from
-decentralization will continue to exist. In order for people today to believe
-that Bitcoin will work tomorrow, Bitcoin needs to resolve the issue of block
-size centralization effects; large blocks implicitly create trusted custodians
-and significantly higher fees.
-
-\section{A Network of Micropayment Channels Can Solve Scalability}
+\section{Una red de canales de micropagos puede resolver la escalabilidad}
 
 \begin{quote}
-	``If a tree falls in the forest and no one is around to hear it, does
-	it make a sound?''
+	``Si un árbol cae en el bosque y nadie está cerca para escucharlo, ¿hace un sonido?''
 \end{quote}
 
-The above quote questions the relevance of unobserved events \textemdash if
-nobody hears the tree fall, whether it made a sound or not is of no
-consequence. Similarly, in the blockchain, if only two participants care about
-an everyday recurring transaction, it's not necessary for all other nodes in
-the bitcoin network to know about that transaction. It is instead preferable to
-only have the bare minimum of information on the blockchain. By deferring
-telling the entire world about every transaction, doing net settlement of their
-relationship at a later date enables Bitcoin users to conduct many transactions
-without bloating up the blockchain or creating trust in a centralized
-counterparty. An effectively trustless structure can be achieved by using time
-locks as a component to global consensus. 
+La cita anterior cuestiona la relevancia de los eventos no observados \textemdash si
+nadie oye la caída del árbol, si hizo un sonido o no no tiene ningúna
+consecuencia. Del mismo modo, en el blockchain, si solo dos participantes se preocupan por
+una transacción recurrente diaria, no es necesario para todos los otros nodos en
+la red bitcoin saber sobre esa transacción. En cambio, es preferible
+solo tener el mínimo de información en el blockchain. Aplazando
+decir al mundo entero sobre cada transacción, haciendo un acuerdo neto de su
+relación en una fecha posterior permite a los usuarios de Bitcoin realizar muchas transacciones
+sin hinchar el blockchain o crear confianza en una contraparte 
+centralizado. Se puede lograr una estructura efectivamente sin confianza
+mediante el uso de bloqueos de tiempo como un componente del consenso global.
 
-Currently the solution to micropayments and scalability is to offload the
-transactions to a custodian, whereby one is trusting third party custodians to
-hold one's coins and to update balances with other parties. Trusting third
-parties to hold all of one's funds creates counterparty risk and transaction
-costs.
+Actualmente la solución para micropagos y escalabilidad es descargar las
+transacciones a un custodio, donde uno confía en terceros como custodios para
+que guarden las monedas y para actualizar los saldos con otras partes. Confiar en que terceros
+puedan mantener todos sus fondos crea riesgos de contraparte y costos de transacción.
 
-Instead, using a network of these micropayment channels, Bitcoin can scale to
-billions of transactions per day with the computational power available on a
-modern desktop computer today. Sending many payments inside a given
-micropayment channel enables one to send large amounts of funds to another
-party in a decentralized manner. These channels are not a separate trusted
-network on top of bitcoin. They are real bitcoin transactions.
+En cambio, usando una red de estos canales de micropagos, Bitcoin puede escalar a
+miles de millones de transacciones por día con la potencia computacional disponible en una
+computadora de escritorio moderna. Envío de muchos pagos dentro de un determinado
+canal de micropago le permite a uno enviar grandes cantidades de fondos a otra
+parte de forma descentralizada. Estos canales no son una red de confianza separada
+en la parte superior de bitcoin. Son transacciones reales de bitcoin.
 
 Micropayment channels\cite{wikicontracts}\cite{bitcoinjmicropay} create a
 relationship between two parties to perpetually update balances, deferring what
